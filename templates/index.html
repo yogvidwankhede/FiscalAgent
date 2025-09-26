@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GFC Financial Chatbot</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #chat { border: 1px solid #ddd; height: 400px; overflow:auto; padding:10px; border-radius:8px; }
+    .msg { margin: 8px 0; }
+    .user { color: white; background: #2b7cff; padding:8px; display:inline-block; border-radius:6px; }
+    .bot { color:#222; background:#f1f3f5; padding:8px; display:inline-block; border-radius:6px; }
+    #inputRow { margin-top: 10px; display:flex; gap:8px; }
+    #message { flex:1; padding:8px; }
+    img.plot { max-width:100%; margin-top:8px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h2>GFC Financial Chatbot — Prototype</h2>
+  <div id="chat"></div>
+  <div id="inputRow">
+    <input id="message" placeholder="Ask: 'Total revenue for GFC in 2023'">
+    <button id="send">Send</button>
+  </div>
+
+  <script src="/static/js/chat.js"></script>
+</body>
+</html>
