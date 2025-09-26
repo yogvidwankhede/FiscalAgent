@@ -1,4 +1,4 @@
-GFC Financial Chatbot — Prototype
+Financial Chatbot — Prototype
 --------------------------------
 Run:
   python -m venv venv

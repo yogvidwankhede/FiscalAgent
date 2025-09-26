@@ -1,8 +1,20 @@
-FROM python:3.10-slim
+# Dockerfile
+FROM python:3.11-slim
+
+# Set working directory
 WORKDIR /app
-COPY . /app
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-ENV FLASK_ENV=production
-EXPOSE 5000
-CMD ["gunicorn", "app:app", "-w", "4", "-b", "0.0.0.0:5000"]
+
+# Copy requirements first (caching)
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all code
+COPY . .
+
+# Expose the port Render expects
+EXPOSE 10000
+
+# Command to run the app
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:10000"]
