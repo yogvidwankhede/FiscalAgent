@@ -1,26 +1,34 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FiscalBuddy-AI — Financial Chatbot</title>
   <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
-    <img src="https://img.icons8.com/color/96/stock-market.png" class="logo" alt="logo">
-    <h3>Chat History</h3>
+    <div class="sidebar-header">
+      <h3>Chat History</h3>
+      <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+    </div>
     <div class="history-list" id="history"></div>
   </div>
 
+  <!-- Main Chat Area -->
   <div class="main">
     <div class="chat-header">
       <h2>FiscalBuddy-AI</h2>
     </div>
+
     <div class="chat-body" id="chat"></div>
+
     <div class="chat-input-container">
-      <input id="message" placeholder="Ask about stocks, crypto, or finance...">
+      <input id="message" placeholder='Ask: "Total revenue for Tesla in 2023"' />
       <button id="send">➤</button>
     </div>
+
     <div class="dark-toggle" onclick="toggleDark()">🌙</div>
   </div>
 
