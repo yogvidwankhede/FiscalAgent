@@ -32,5 +32,8 @@ def chat_api():
     return jsonify({'session_id': session_id, 'reply': res['text'], 'image': res.get('image')})
 
 # serve static files (Flask does this automatically at /static)
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
+    port = int(os.environ.get("PORT", 10000))  # Render will assign a port
+    app.run(host="0.0.0.0", port=port, debug=False)
